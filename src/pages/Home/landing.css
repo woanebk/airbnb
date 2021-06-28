@@ -1,0 +1,131 @@
+/*
+
+ COLORSWATCHES
+
+ pale-gray: #f7f7f7;
+ primary-color: #ff385c;
+
+ */
+
+
+/* SEARCH SECTION */
+#content .search-section {
+	padding-top: 40px;
+}
+
+#content .search-section .tab-headers a {
+	margin-right: 20px;
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+#content .search-section .tab-headers a.active {
+	border-bottom: 2px solid black;
+}
+
+#content .search-section .tab-body .search-bar {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	box-shadow: 0px 0px 5px #ccc;
+	align-items: center;
+	border-radius: 10px;
+}
+
+#content .search-section .tab-body .search-bar .divider {
+	width: 1px;
+	background: #ddd;
+	height: 30px;
+}
+
+#content .search-section .tab-body .search-bar .field {
+	width: calc((100% - 148px) / 3); /* 140px for actions, 1px each for divider */
+	padding: 15px 20px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+}
+
+#content .search-section .tab-body .search-bar .field:hover {
+	border-color: #999;
+}
+
+#content .search-section .tab-body .search-bar .field label {
+	display: block;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+#content .search-section .tab-body .search-bar .actions {
+	width: 140px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#content .search-section .tab-body .search-bar .field input[type='text'] {
+	display: block;
+	border: none;
+	font-size: 1.2em;
+}
+
+/* FEATURED SECTION */
+#content .featured-section {
+	padding-top: 40px;
+}
+
+#content .featured-section h2 {
+	font-weight: normal;
+	max-width: 600px;
+	font-size: 3em;
+	line-height: 1.2em;
+	color: #ff385c;
+}
+
+#content .featured-section .tiles {
+	display: flex;
+	flex-direction: row;
+}
+
+#content .featured-section .tiles .tile {
+	width: 420px;
+	margin-right: 15px;
+	border-radius: 15px;
+	overflow: hidden;
+	box-shadow: 0 0 5px #ddd;
+}
+
+#content .featured-section .tiles .tile .image-container {
+	height: 280px;
+	background: #ddd;
+	position: relative;
+	overflow: hidden;
+}
+
+#content .featured-section .tiles .tile .image-container img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#content .featured-section .tiles .tile .image-container .badge {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#content .featured-section .tiles .tile .writeup {
+	padding: 15px;
+}
+
+#content .featured-section .tiles .tile .writeup .header {
+	margin-bottom: 5px;
+}
+
+#content .featured-section .tiles .tile .writeup .description {
+	font-size: 0.9em;
+	color: #999;
+}
+
+#footer {
+
+}
