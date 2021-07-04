@@ -21,7 +21,7 @@ export class index extends Component {
 						</div>
 						<div class='nav-links'>
 							<a href="#">Host your home</a>
-							<a href="#">Host an experience</a>
+							<Link  to="/becomeahost">Become a host</Link>
 							<a href="#">Help</a>
 							<a href="#">Login</a>
 							<a href="#" class='sign-up-link'>Sign up</a>

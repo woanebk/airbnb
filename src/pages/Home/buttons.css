@@ -7,4 +7,11 @@ a.btn {
 a.btn.btn-primary {
 	color: white;
 	background: #ff385c;
+	border-color: #ff385c;
 }
+
+.btn:active {
+	background-color: #ff385c !important;
+	border-color: #ff385c !important;
+  }
+  
