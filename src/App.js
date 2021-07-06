@@ -11,6 +11,7 @@ import Introduce from "./pages/BecomeHost/Introduce/introduce";
 import Location from "./pages/BecomeHost/Location/location";
 import Describe from "./pages/BecomeHost/Describe/describe";
 import Contact from "./pages/BecomeHost/Contact/contact";
+import SearchList from "./pages/SearchList/searchList";
 
 export default function App() {
   return (
@@ -31,6 +32,9 @@ export default function App() {
           </Route>
           <Route path="/descripe">
             <Describe />
+          </Route>
+          <Route path="/result">
+            <SearchList />
           </Route>
           <Route path="/contact">
             <Contact />

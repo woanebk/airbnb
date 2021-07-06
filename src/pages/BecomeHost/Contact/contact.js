@@ -98,7 +98,13 @@ export class contact extends Component {
                         </div>
 
 
-                        
+                        <div style={{marginTop:"15px"}} className="row line">
+                        <div style={{width:"620px"}} className="row line2">
+                       
+                       </div>
+                        </div>
+
+
                         <div style={{height:"100px", marginTop:"25px"}} className="row">
                         <div className="col-8">
                         <a style={{fontSize:"18px", marginLeft:"30px",  marginTop:"15px !important"}}  href="https://vimeo.com/channels/staffpicks/93951774" data-fancybox className="text-uppercase letter-spacing-1"><i class="fas fa-arrow-left"></i> <u>Back </u></a>

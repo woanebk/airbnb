@@ -56,7 +56,7 @@ export class index extends Component {
 										<input type='text' placeholder='Add guests' />
 									</div>
 									<div class='actions'>
-										<a href='#' class='btn btn-primary'>Search</a>
+										<Link to={"/result"} class='btn btn-primary'>Search</Link>
 									</div>
 								</div>
 							</div>

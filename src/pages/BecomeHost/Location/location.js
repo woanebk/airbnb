@@ -90,7 +90,7 @@ export class location extends Component {
                     </div>
 
                     <div className="col-md-6">
-                        <div style={{height:"480px"}} className="row location">
+                        <div style={{height:"490px"}} className="row location">
                             <h2 style={{marginLeft:"140px", marginTop:"55px"}}>Where’s your place located?</h2>
                            
                             <div style={{marginTop:"-280px", marginLeft:"235px"}} className="body1">
@@ -158,6 +158,12 @@ export class location extends Component {
                                 
                         </div>
                         </div>
+                        <div className="row line">
+                        <div className="row line2">
+                       
+                       </div>
+                        </div>
+
                         <div style={{height:"100px", marginTop:"25px"}} className="row">
                         <div className="col-8">
                         <a style={{fontSize:"18px", marginLeft:"30px",  marginTop:"15px !important"}}  href="https://vimeo.com/channels/staffpicks/93951774" data-fancybox className="text-uppercase letter-spacing-1"><i class="fas fa-arrow-left"></i> <u>Back </u></a>
