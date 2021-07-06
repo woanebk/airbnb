@@ -5,47 +5,41 @@ import {
   Route
 } from "react-router-dom";
 import Home from './pages/Home'
-import About from './pages/Guest/About'
-import Users from './pages/Host/Users'
 import Introduce from "./pages/BecomeHost/Introduce/introduce";
 import Location from "./pages/BecomeHost/Location/location";
 import Describe from "./pages/BecomeHost/Describe/describe";
 import Contact from "./pages/BecomeHost/Contact/contact";
 import SearchList from "./pages/SearchList/searchList";
 
-export default function App() {
+function App() {
   return (
-    <Router>
-      <div>
-        <Switch>
-          <Route path="/about">
-            < About/>
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/becomeahost">
-            <Introduce />
-          </Route>
-          <Route path="/location">
-            <Location />
-          </Route>
-          <Route path="/descripe">
-            <Describe />
-          </Route>
-          <Route path="/result">
-            <SearchList />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-         
-        </Switch>
-      </div>
-    </Router>
+    // <Router>
+    //     <Switch>
+    //       <Route path="/">
+    //         <Home />
+    //       </Route>
+    //       <Route path="/becomeahost">
+    //         <Introduce />
+    //       </Route>
+    //       <Route path="/location">
+    //         <Location />
+    //       </Route>
+    //       <Route path="/describe">
+    //         <Describe />
+    //       </Route>
+    //       <Route path="/result">
+    //         <SearchList />
+    //       </Route>
+    //       <Route path="/contact">
+    //         <Contact />
+    //       </Route>
+    //     </Switch>
+    // </Router>
+    <Home />
   );
 }
+
+
+export default App
+
 

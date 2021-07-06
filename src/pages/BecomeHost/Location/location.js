@@ -169,7 +169,7 @@ export class location extends Component {
                         <a style={{fontSize:"18px", marginLeft:"30px",  marginTop:"15px !important"}}  href="https://vimeo.com/channels/staffpicks/93951774" data-fancybox className="text-uppercase letter-spacing-1"><i class="fas fa-arrow-left"></i> <u>Back </u></a>
                         </div>
                         <div className="col-4">
-                        <Link style={{marginLeft:"30px"}} to="/descripe" class='btn btn-primary'>Next  &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></Link>
+                        <Link style={{marginLeft:"30px"}} to="/describe" class='btn btn-primary'>Next  &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></Link>
                         </div>
                         </div>
                     </div>

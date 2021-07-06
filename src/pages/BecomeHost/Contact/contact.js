@@ -110,7 +110,7 @@ export class contact extends Component {
                         <a style={{fontSize:"18px", marginLeft:"0px",  marginTop:"30px"}}  href="https://vimeo.com/channels/staffpicks/93951774" data-fancybox className="text-uppercase letter-spacing-1"><i class="fas fa-arrow-left"></i> <u>Back </u></a>
                         </div>
                         <div className="col-4">
-                        <Link style={{marginLeft:"50px"}} to="/descripe" class='btn btn-primary'>Finish  &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></Link>
+                        <Link style={{marginLeft:"50px"}} to="/describe" class='btn btn-primary'>Finish  &nbsp; &nbsp; <i class="fas fa-arrow-right"></i></Link>
                         </div>
                         </div>
                     </div>
