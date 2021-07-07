@@ -11,7 +11,7 @@ import just_booked_2 from './just-booked-2.jpg'
 import just_booked_3 from './just-booked-3.jpg'
 import just_booked_4 from './just-booked-4.jpg'
 import Footer from './footer'
-
+import {Link} from 'react-router-dom';
 class App extends React.Component {
   render() {
     return (<>
@@ -34,7 +34,7 @@ class App extends React.Component {
               </div>
               <div class="lg:pl-5 w-full lg:w-1/2">
                 <p class="text-white mb-2 tracking-wide">Earn money from your extra space</p>
-                <a href="#" class="transition border-2 border-white bg-transparent px-10 py-3 rounded text-white font-bold hover:bg-gray-800 block w-full text-center">Host</a>
+                <Link class="transition border-2 border-white bg-transparent px-10 py-3 rounded text-white font-bold hover:bg-gray-800 block w-full text-center">Host</Link>
               </div>
             </div>
           </div>
