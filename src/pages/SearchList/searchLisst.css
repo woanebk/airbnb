@@ -1,0 +1,152 @@
+.nav{
+    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08) !important;
+   
+}
+
+.searchPage__info {
+    padding: 20px;
+  }
+
+.searchPage__info > p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.searchPage__info > h1 {
+    margin-bottom: 30px;
+}
+
+.searchPage__info > button {
+    border-radius: 30px;
+    text-transform: inherit;
+    margin: 5px;
+  }
+  
+  .map{
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+}
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+
+
+
+.field {
+  display:flex;
+  position:realtive;
+  margin:4em auto;
+  width:70%;
+  flex-direction:row;
+  box-shadow:
+   1px 1px 0 rgb(22, 160, 133),
+   2px 2px 0 rgb(22, 160, 133),
+   3px 3px 0 rgb(22, 160, 133),
+   4px 4px 0 rgb(22, 160, 133),
+   5px 5px 0 rgb(22, 160, 133),
+   6px 6px 0 rgb(22, 160, 133),
+   7px 7px 0 rgb(22, 160, 133)
+  ;
+}
+
+.field>input[type=text],
+.field>button {
+  display:block;
+  font:1.2em 'Montserrat Alternates';
+}
+
+.field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgb(26, 188, 156);
+}
+
+.field>button {
+  padding:0.6em 0.8em;
+  background-color:rgb(26, 188, 156);
+  color:white;
+  border:none;
+}
+.sidebar {
+    flex: 9.7;
+}
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+  }
+  
+  .sidebarWrapper {
+    padding: 20px;
+  }
+  
+  .sidebarList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .sidebarListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebarIcon {
+    margin-right: 15px;
+  }
+  
+  .sidebarButton {
+    width: 150px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .sidebarHr {
+    margin: 20px 0;
+  }
+  
+  .sidebarFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .sidebarFriendImg
+  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #3e8177;
+    margin-bottom: 22px;
+    }
+    
+    .section-title:after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #3e8177;
+    position: absolute;
+    right: -60px;
+    top: 14px;
+    }

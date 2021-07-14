@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css';
+import './index.scss'
 import _1 from './1.jpg'
 import _2 from './2.jpg'
 import _3 from './3.jpg'
@@ -12,7 +13,18 @@ import just_booked_3 from './just-booked-3.jpg'
 import just_booked_4 from './just-booked-4.jpg'
 import Footer from './footer'
 import {Link} from 'react-router-dom';
+import DatePicker from 'react-datepicker';
+
+
 class App extends React.Component {
+  constructor(){
+		super();
+		this.state = {
+		
+			date: new Date(),
+		};
+		
+	}
   render() {
     return (<>
       <body class="antialiased text-gray-800" style={{ margin: 0 }}>
@@ -26,53 +38,130 @@ class App extends React.Component {
           </a>
 
           <div class="max-w-5xl mx-auto lg:py-32 py-4">
-            <h2 class="lg:text-5xl text-4xl font-semibold text-white leading-none mb-4">Book a trip. Host travels. All on Airbnb.</h2>
+            <h2 style={{textAlign:"center"}} class="lg:text-5xl text-4xl font-semibold text-white leading-none mb-4">Book a trip. Host travels. All on Airbnb.</h2>
             <div class="flex items-center flex-wrap justify-start max-w-2xl lg:mx-0 mx-auto">
               <div class="lg:pr-5 w-full lg:w-1/2 mb-4 lg:mb-0">
                 <p class="text-white mb-2 tracking-wide">Find places to stay and things to do</p>
                 <a href="#" class="transition bg-white px-10 py-3 rounded font-bold hover:bg-gray-300 block w-full text-center border-2 border-white">Explore</a>
               </div>
-              <div class="lg:pl-5 w-full lg:w-1/2">
+              <div style={{marginBottom:"23px"}} class="lg:pl-5 w-full lg:w-1/2">
                 <p class="text-white mb-2 tracking-wide">Earn money from your extra space</p>
-                <Link class="transition border-2 border-white bg-transparent px-10 py-3 rounded text-white font-bold hover:bg-gray-800 block w-full text-center">Host</Link>
+                <Link to="/becomeahost" class="transition border-2 border-white bg-transparent px-10 py-3 rounded text-white font-bold hover:bg-gray-800 block w-full text-center">Host</Link>
+              </div>
+            </div>
+          </div>
+
+          <div style={{marginLeft:"240px", marginTop:"60px"}}  id="booking" className="section">
+          <h3 class="font-bold bold text-2xl mb-4 leading-none">Book unique homes and experiences</h3>
+        <div className="section-center">
+          <div className="container">
+            <div className="row">
+              <div  className="booking-form">
+                <form>
+                  <div className="row no-margin">
+                    
+                    <div className="col-md-12">
+
+                      <div className="row no-margin">
+
+                      <div  className="col-md-2">
+                        <span>Destination</span>
+                          <div className="form-group">
+                          <select placeholder="select Destination " className="form-control">
+                              <option>Da Nang</option>
+                              <option>Ho Chi Minh</option>
+                              <option>Ha Noi</option>
+                            </select>
+                           </div>
+                        </div>
+
+                        <div className="col-md-3">
+                          <div className="form-group">
+                            <span className="form-label">Check In</span>
+                            <input className="form-control" type="date" />
+                          </div>
+                        </div>
+
+
+                        <div className="col-md-3">
+                          <div className="form-group">
+                            <span className="form-label">Check out</span>
+                            <input className="form-control" type="date" />
+                          </div>
+                        </div>
+
+                        <div className="col-md-2">
+                          <div className="form-group">
+                            <span className="form-label">Guests</span>
+                            <select placeholder="select Destination " className="form-control">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                            </select>
+                            <span className="select-arrow" />
+                          </div>
+                        </div>
+
+                        <div className="col-md-2">
+                        <Link style={{marginTop:"20px", height:"45px"}} to="/searchresult"  type="submit" defaultValue="Search" className="form-control btn btn-primary" > <i class="fas fa-search"></i> &nbsp; Search</Link>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+
+        </div>
 
         <div class="max-w-5xl mx-auto lg:py-16 py-12 lg:px-0 px-4">
+        <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">Live anywhere</h3>
 
-          <h3 class="font-bold bold text-2xl mb-4 leading-none">Book unique homes and experiences</h3>
+        <div className="cards-list">
+        <div className="card 1">
+          <div className="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+          <div className="card_title title-white">
+            <p>Unique Stay</p>
+          </div>
+        </div>
+        <div className="card 2">
+          <div className="card_image">
+            <img src="https://media1.popsugar-assets.com/files/thumbor/Nd5p9XJMuX_mvnHzBFNb-MK9XHs/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/01/21/032/n/1922243/7c0e0ba9_edit_img_image_14690959_1453249161/i/Cute-Dog-GIFs.png" />
+          </div>
+          <div className="card_title title-white">
+            <p>Pet allowed</p>
+          </div>
+        </div>
+        <div className="card 3">
+          <div className="card_image">
+            <img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
+          </div>
+          <div className="card_title">
+            <p>Entire home</p>
+          </div>
+        </div>
+        <div className="card 4">
+          <div className="card_image">
+            <img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" />
+          </div>
+          <div className="card_title title-black">
+            <p>Outdoor</p>
+          </div>
+        </div>
+      </div>
 
-          <form action="#" class="lg:mb-16 mb-10">
-
-            <div class="flex items-start justify-start flex-wrap">
-              <div class="lg:w-1/3 w-full lg:pr-2 mb-4 lg:mb-0">
-                <label for="where" class="label">Where</label>
-                <input type="text" class="input" id="where" placeholder="Anywhere" />
-              </div>
-              <div class="lg:w-1/3 w-full lg:px-2 mb-4 lg:mb-0">
-                <label for="checkin_checkout" class="label">Check-in - Checkout</label>
-                <input type="text" class="input" id="checkin_checkout" placeholder="mm/dd/yyyy - mm/dd/yyyy" />
-              </div>
-              <div class="lg:w-1/3 w-full lg:pl-2">
-                <label for="guests" class="label">Guests</label>
-                <div class="relative">
-                  <select id="guests" class="input select">
-                    <option value="1" selected>1 guest</option>
-                    <option value="2" selected>2 guests</option>
-                    <option value="3" selected>3 guests</option>
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"><svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20">
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
-          <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">What guests are saying about homes in the Viet Nam</h3>
+          <h3 style={{marginTop:"40px"}} class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">What guests are saying about homes in the Viet Nam</h3>
 
           <div class="flex lg:items-center items-start">
             <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style={{height: 24, width: 24, fill:'#FFB400'}}><path d="m21.95 9.48a.84.84 0 0 0 -.87-.48h-4.62a.5.5 0 0 0 0 1l4.14.01-4.81 4.17a.5.5 0 0 0 -.14.57l2.65 6.38-6.07-3.72a.5.5 0 0 0 -.52 0l-6.08 3.72 2.65-6.37a.5.5 0 0 0 -.13-.57l-4.75-4.18h5.75a.5.5 0 0 0 .46-.3l2.37-5.37 1.58 3.57a.5.5 0 0 0 .91-.41l-1.72-3.88a.8.8 0 0 0 -1.56-.01l-2.38 5.39h-5.9a.83.83 0 0 0 -.87.48.85.85 0 0 0 .32.96l4.85 4.25-2.78 6.67a.81.81 0 0 0 .16.98.66.66 0 0 0 .43.15 1.1 1.1 0 0 0 .56-.18l6.37-3.91 6.38 3.92a.81.81 0 0 0 .99.03c.15-.12.37-.41.15-1l-2.77-6.66 4.92-4.26a.84.84 0 0 0 .31-.95zm-.78.53h-.01" fill="#484848"></path><path d="m11 21.5a.5.5 0 1 1 -.5-.5.5.5 0 0 1 .5.5zm-3.5-15.5a.5.5 0 1 0 .5.5.5.5 0 0 0 -.5-.5zm15 10h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm-15-13h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm10.22 7.54a.84.84 0 0 0 -.17-.02q-.28-.01-3.19 0a .6.6 0 0 1 -.55-.35l-1.5-3.23a.42.42 0 0 0 -.75 0l-1.81 4.14a2.92 2.92 0 0 0 4.12 3.72l.46-.26 3.49-2.99.16-.18a.5.5 0 0 0 -.26-.82z"></path></svg>
@@ -166,6 +255,101 @@ class App extends React.Component {
             </div>
           </section>
 
+
+{/*galley start*/}
+<section id="gallery" className="gallery">
+        <div className="container">
+          <div className="gallery-details">
+            <div className="gallary-header text-center">
+              <h2>
+                top destination
+              </h2>
+              <p>
+                Where do you wanna go? How much you wanna explore?  
+              </p>
+            </div>{/*/.gallery-header*/}
+            <div className="gallery-box">
+              <div className="gallery-content">
+                <div className="filtr-container">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="filtr-item">
+                        <img src="assets/images/gallary/g1.jpg" alt="portfolio image" />
+                        <div className="item-title">
+                          <a href="#">
+                            china
+                          </a>
+                          <p><span>20 stays</span> &nbsp;&nbsp;&nbsp;<p>30 minutes drive</p></p>
+                        </div>{/* /.item-title */}
+                      </div>{/* /.filtr-item */}
+                    </div>{/* /.col */}
+                    <div className="col-md-6">
+                      <div className="filtr-item">
+                        <img src="assets/images/gallary/g2.jpg" alt="portfolio image" />
+                        <div className="item-title">
+                          <a href="#">
+                            venuzuala
+                          </a>
+                          <p><span>20 stays</span> &nbsp;&nbsp;&nbsp;<p>30 minutes drive</p></p>
+                        </div> {/* /.item-title*/}
+                      </div>{/* /.filtr-item */}
+                    </div>{/* /.col */}
+                    <div className="col-md-4">
+                      <div className="filtr-item">
+                        <img src="assets/images/gallary/g3.jpg" alt="portfolio image" />
+                        <div className="item-title">
+                          <a href="#">
+                            brazil
+                          </a>
+                          <p><span>20 stays</span> &nbsp;&nbsp;&nbsp;<p>30 minutes drive</p></p>
+                        </div>{/* /.item-title */}
+                      </div>{/* /.filtr-item */}
+                    </div>{/* /.col */}
+                    <div className="col-md-4">
+                      <div className="filtr-item">
+                        <img src="assets/images/gallary/g4.jpg" alt="portfolio image" />
+                        <div className="item-title">
+                          <a href="#">
+                            australia 
+                          </a>
+                          <p><span>25 stays</span> &nbsp;&nbsp;&nbsp;<p>30 minutes drive</p></p>
+                        </div> {/* /.item-title*/}
+                      </div>{/* /.filtr-item */}
+                    </div>{/* /.col */}
+                    <div className="col-md-4">
+                      <div className="filtr-item">
+                        <img src="assets/images/gallary/g5.jpg" alt="portfolio image" />
+                        <div className="item-title">
+                          <a href="#">
+                            netharlands
+                          </a>
+                          <p><span>90 stays</span> &nbsp;&nbsp;&nbsp;<p>30 minutes drive</p></p>
+                        </div> {/* /.item-title*/}
+                      </div>{/* /.filtr-item */}
+                    </div>{/* /.col */}
+                    <div style={{marginTop:"-290px", marginLeft:"328px"}} className="col-md-8">
+                      <div className="filtr-item">
+                        <img src="assets/images/gallary/g6.jpg" alt="portfolio image" />
+                        <div className="item-title">
+                          <a href="#">
+                            turkey
+                          </a>
+                          <p><span>20 stays</span> &nbsp;&nbsp;&nbsp;<p>30 minutes drive</p></p>
+                        </div> {/* /.item-title*/}
+                      </div>{/* /.filtr-item */}
+                    </div>{/* /.col */}
+                  </div>{/* /.row */}
+                </div>{/* /.filtr-container*/}
+              </div>{/* /.gallery-content */}
+            </div>{/*/.galley-box*/}
+          </div>{/*/.gallery-details*/}
+        </div>{/*/.container*/}
+      </section>{/*/.gallery*/}
+      {/*gallery end*/}
+
+
+
+
           <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">Just booked in the Viet Nam</h3>
 
           <section class="flex items-start flex-wrap justify-between lg:my-8 my-6">
@@ -236,7 +420,9 @@ class App extends React.Component {
             <a href="#" class="bg-cyan px-6 py-3 rounded text-white font-bold inline-block my-2">Add dates</a>
           </section>
         </div>
+       
         <Footer/>
+        
       </body>
 
     </>);

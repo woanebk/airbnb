@@ -1,0 +1,23 @@
+.bg-light {
+    background: #f2f4fb !important; 
+}
+
+.img-absolute {
+        position: absolute;
+        bottom: -60px;
+        right: -40px; }
+        .img-absolute img {
+          max-width: 250px;
+          border-radius: 50%;
+          border: 10px solid #f2f4fb; }
+        @media (max-width: 991.98px) {
+          .img-absolute {
+            right: 0px; }
+            .img-absolute img {
+              max-width: 160px; } 
+}
+
+.set-hight
+{
+  height: 650px;
+}
