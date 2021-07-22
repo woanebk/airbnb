@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-div.container{
+/*div.container{
   font-size: 62.5%;
   text-decoration-color: black;
   line-height: 1.6rem;
@@ -12,6 +12,7 @@ div.container{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+*/
 
 div.slide-image{
   height:55vh;
