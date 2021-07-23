@@ -6,14 +6,13 @@ import Location from './pages/BecomeHost/Location/location';
 import Describe from './pages/BecomeHost/Describe/describe';
 import Contact from './pages/BecomeHost/Contact/contact';
 import SearchList from './pages/SearchList/searchList';
-//import RoomDetails from './pages/Guest/RoomDetails'
 import Footer from './pages/Home/footer';
 import RoomDetails from './pages/Guest/RoomDetails';
 
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <div>
           <Switch>
             <Route path="/becomeahost">
@@ -31,16 +30,16 @@ function App() {
             <Route path="/searchresult">
               <SearchList />
             </Route>
-
             <Route path="/">
               <Home />
             </Route>
-            {/* <Route path="/room-details">
-            <RoomDetails />
-          </Route> */}
+            <Route path="/room-details">
+              <RoomDetails />
+            </Route>
           </Switch>
         </div>
-      </Router>
+      </Router> */}
+      <RoomDetails/>
       <Footer />
     </>
   );

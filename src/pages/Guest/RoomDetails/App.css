@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+:root{
+  --main-color:#2d959e;
+  --blue-color:#00A699;
+  --pink-color: #FF5A5F;
+  --orange-color: #FC642D;
+  --gray-color: #484848;
+  --light-gray-color: #767676;
+}
+
+div.container{
+  font-size: 62.5%;
+  text-decoration-color: black;
+  line-height: 1.6rem;
+  padding: 10px
+}
+
+*{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Varela Round', sans-serif; */
+}
+
+div.slide-image{
+  height:55vh;
+  width: calc(100vw-20px);
+  margin-bottom: 10px;
+}
+
+div.room-details-book{
+  display: flex;
+  flex-direction: row;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+div.room-details {
+  width: 62%;
+  height:100%;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-clip: content-box;
+}
+
+div.book-section{
+  width:38%;
+}
+
+div.book-form{
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  width: 65%;
+  margin-top: 50px;
+  border-color:  gainsboro;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+img.img{
+height: 55vh;
+width: 100%;
+object-fit: cover;
+}
+
+div.img-container{
+  height: 55vh;
+  width:70%;
+}
+
+div.img-container + div.img-container{
+  margin-left: 5px;
+}
+
+.carousel{
+  height: 90%;
+  width: 100%;
+}
+
+div.title-container{
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  font-weight:500;
+  justify-content: flex-start;
+  border-bottom:gainsboro;
+  border-bottom-width: 2px;
+  border-bottom-style:solid;
+  position: relative;
+  height:50px;
+}
+
+p.section-title{
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+p.title--inactive{
+  color: var(--main-color)
+}
+
+p.title--active{
+  color:var(--gray-color)
+}
+
+div.container-title--active{
+  position: relative;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-bottom-color: #4d4d4d;
+  margin-bottom: -2px;
+}
+
+div.category-container{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  height: 50px;
+}
+
+div.host-card{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+div.host-name-reviews-container{
+  margin-left: 15px;
+}
+
+div.host-profile-img{
+  background-image: url(./host-profile-img.jpg);
+  height: 76px;
+  width: 76px;
+  border-radius: 38px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+div.host-profile-verified-badge{
+  background-image: url(./Flat_tick_icon.svg.png);
+  background-size: contain;
+  position: absolute;
+  right:0px;
+  bottom: 0px;
+  height: 18px;
+  width: 18px;
+}
+
+p.host-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #444444;
+  cursor: pointer;
+}
+
+p.host-contactbutton{
+  font-size: 18px;
+  color: var(--main-color);
+  font-weight: 500;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+div.host-name-contactbutton-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:50px
+}
+
+div.host-reviews-verified-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 20px;
+
+}
+
+p.host-reviews-quantity{
+  font-size: 14px;
+  font-weight: 620;
+  color: #555555;
+}
+
+p.host-verified{
+  font-size: 14px;
+  font-weight: 620;
+  color: #555555;
+}
+
+div.room-spec-icon-quantity-container{
+  display: flex;
+  flex-direction: row;
+}
+
+div.room-spec-room-icon{
+  background-image: url('./room.png');
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+}
+div.room-spec-bed-icon{
+  background-image: url('./bed.png');
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+}
+div.room-spec-bath-icon{
+  background-image: url('./bath.png');
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+}
+div.room-spec-guests-icon{
+  background-image: url('./guests.png');
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+}
+
+div.room-spec-container{
+  display:  flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div.room-spec-img-container{
+  height: 60px;
+  display: flex;
+  margin-top: 5px;
+}
+
+img.room-spec-img{
+  height:100%;
+  object-fit: contain;
+}
+
+h1.room-title{
+  color: #444444;
+  margin-bottom: 5px;
+  margin-top:35px;
+  font-size: 38px;
+  line-height: 40px;
+}
+
+h2.category-type{
+  color: #454545;
+  font-weight:500;
+  font-size:17px;
+}
+
+h3.category-location{
+  color: #606060;
+  font-weight: 500;
+  font-size: 15px
+}
+
+div.checkin-checkout-container{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  border-top: solid 2px gainsboro;
+  border-right: solid 2px gainsboro;
+  border-bottom: solid 2px gainsboro;
+  align-items: center;
+
+}
+
+.checkin-checkout-container > .react-icons-arrow-right{
+  font-size: 30px;
+  color:#606060
+}
+
+div.guests-quantity-picker-container{
+  border: solid 2px gainsboro;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.guests-quantity-picker-container > .react-icons-arrow-down{
+  font-size: 40px;
+
+}
+
+.book-btn{
+  background-color: var(--pink-color);
+  display: flex;
+  justify-content: center;
+  height:60px;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.book-btn > .book-btn-content{
+  color: white;
+  font-size: 22px;
+  font-weight: 610;
+}
+
+div.book-description-container{
+  display: flex;
+  justify-content: center;
+}
+
+div.book-description-container > p.description{
+  font-size: 12px;
+  font-weight: 500;
+  color: #606060
+}
+
+div.book-form > div.price-roomrating-container{
+  border-bottom: gainsboro solid 2px;
+  padding-bottom: 15px
+}
+
+div.price-roomrating-container > div.price-priceunit-container{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  line-height: 0px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+div.price-roomrating-container > div.rating-container{
+  display: flex;
+  flex-direction: row;
+  line-height: 0px;
+  align-items: center;
+  position: relative;
+  top: -8px
+}
+
+div.rating-container > .react-icons-star{
+  font-size: 15px;
+  color:var(--main-color)
+}
+
+div.rating-container > p.rating-quantity {
+  font-size: 15px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 500;
+  color:#606060;
+  line-height: 0px;
+  margin-left: 4px
+}
+
+div.price-priceunit-container > p.price {
+  font-size: 26px;
+  font-weight: 700;
+  color:var(--gray-color);
+  font-family: 'Arimo', sans-serif;
+}
+
+div.price-priceunit-container > p.price-unit {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color:#606060;
+
+}
+
+div.book-form > p.dates-title{
+  font-size: 15px;
+  line-height:0px;
+  font-weight:500;
+  color:#606060;
+  margin-top: 30px;
+}
+
+div.temp-flex-box{
+  display: flex;
+  flex-grow: 1;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+div.temp-flex-box > p.date{
+  font-size: 18px;
+  line-height:15px;
+  color: silver;
+}
+
+div.temp-flex-box > p.valid-date{
+  font-size: 18px;
+  line-height:15px;
+  color: #606060;
+}
+
+div.book-form > div.guests-quantity-picker-container{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+
+div.guests-quantity-picker-container > div.arrow-down-icon-container{
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+div.arrow-down-icon-container > .react-icons-arrow-down{
+  font-size: 34px;
+  color:#606060
+}  
+
+div.guests-quantity-picker-container > p.guests-quantity {
+  font-size: 18px;
+  line-height:15px;
+  color: #606060
+}
+
+
+/* DropDown section */
+
+div.book-form > div.quantity-dropdown-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+div.quantity-dropdown-wrapper > div.quantity-dropdown {
+  position: absolute;
+  border: solid 2px gainsboro;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 100%;
+  top: -2px;
+  background-color: white;
+}
+
+div.quantity-dropdown > div.quantity-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.quantity-item > p.guests-quantity {
+  font-size: 18px;
+  line-height:15px;
+  color: #606060;
+  margin-left: 15px;
+}
+
+div.quantity-dropdown > div.quantity-item:hover{
+  background-color: var(--main-color);
+}
+
+div.quantity-item:hover > p.guests-quantity {
+  font-size: 18px;
+  line-height:15px;
+  color: white;
+  margin-left: 15px;
+}
+
+.nav{
+  box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08) !important;
+}
+
+div.reviews-section-header{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+  border-bottom: solid 2px gainsboro;
+  padding-bottom: 20px;
+}
+
+div.reviews-section-header > div.reviews-rating-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+div.reviews-rating-container > p.rating-quantity{
+  font-size: 20px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 600;
+  color:var(--gray-color);
+  line-height: 0px;
+}
+
+div.reviews-rating-container > div.stars-group {
+  margin-left: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+div.stars-group > .react-icons-star{
+  font-size: 20px;
+  color:var(--main-color);
+}
+
+div.reviews-section-header > div.search-box {
+  border-radius: 3px;
+  border: solid 2px ;
+  border-color: gainsboro;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  padding: 5px;
+  width: 200px
+}
+
+div.search-box > p.place-holder{
+  margin-left: 5px;
+  color:gray
+}
+
+div.tag-container{
+  margin-top:20px
+}
+
+div.tag-container > div.tag{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+
+div.tag > p.tag-content{
+  font-size: 18px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 500;
+  color:var(--gray-color);
+  line-height: 0px;
+}
+
+div.tag > div.stars-group {
+  display: flex;
+  align-items: center;
+}
+
+div.comment-container{
+  border-top: solid 2px gainsboro;
+  margin-top: 20px;
+  padding-top: 18px
+}
+
+div.user-img-container > div.username-datereview-container{
+  margin-left: 20px;
+  height:100%;
+
+} 
+
+div.username-datereview-container > p.username {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 0px;
+  color: #404040;
+  margin-bottom: 25px;
+}
+
+div.username-datereview-container > p.date-review {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 0px;
+  color:var(--light-gray-color)
+}
+
+div.user-img-container{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+div.user-img-container > img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border-width: 4px;
+  border-style: solid;
+  border-color:gainsboro;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div.comment-container > p.comment{
+
+  font-size: 16px;
+  margin-top: 0px
+}
+
+div.post-comment-btn{
+  background-color: var(--pink-color);
+  height: 40px;
+  width: 150px;
+  line-height: 0px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px
+}
+
+div.post-comment-btn > p.post-rating {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+div.reviews-section-container{
+  position: relative;
+}
+
+div.rule-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.rule-container > div.index-container{
+  background-color: var(--main-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.index-container > p.index{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+div.rule-container > p.rule-content{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-color);
+  margin-left: 15px
+}
+
+div.host-details-container > div.host-basic-container{
+  border: solid 2px gainsboro;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 4px;
+  min-width: 180px;
+  height: 420px
+}
+
+div.host-details-container{
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+/* div.host-basic-container > div.host-img-container{
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  background-image: url(./host-profile-img.jpg);
+
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  justify-self: center
+} */
+
+div.host-basic-container > div.host-img-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom:solid 2px gainsboro;
+  padding-bottom: 20px;
+}
+
+div.host-img-container > div.host-img{
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
+  background-image: url(./host-profile-img.jpg);
+
+  background-position: center;
+  background-size: cover;
+}
+
+div.host-badges{
+  padding-top: 10px;
+  border-bottom:2px solid gainsboro;
+  padding-bottom: 12px;
+}
+
+div.host-badges > div.host-badge-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 34px;
+}
+
+div.host-badge-container > img.badge-icon{
+  height: 25px;
+  width: 25px;
+}
+
+div.host-badge-container > p.content{
+  font-size: 15px;
+  font-weight: 500;
+  color:var(--gray-color);
+  margin-left: 10px;
+}
+
+div.provided-items-container > div.item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.item-container > .check-icon{
+  font-size: 18px;
+  color: var(--main-color);
+  position: relative;
+  top: -2px
+}
+
+div.item-container > p.content{
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-color);
+  line-height: 0px;
+  margin-bottom: 16px;
+}
+
+div.host-provided > p.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-color);
+  line-height: 0px;
+  margin-top: 30px;
+}
+
+div.host-description > h1.greeting{
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 20px
+}
+
+div.host-description > p{
+  font-size: 15px;
+  font-weight: 500;
+  margin-left:10px
+}
+
+div.host-description > div.report-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.report-btn> .flag-icon{
+  font-size: 15px;
+  color: var(--pink-color)
+}
+
+div.report-btn> p{
+  font-size: 15px;
+  color: var(--pink-color);
+  font-weight: 500;
+  margin-left: 5px
+}
+
+div.host-description > div.report-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 20px
+}
+
+div.host-details-container > div.host-description{
+  position:relative
+}
+
+div.host-description p.link{
+color:var(--main-color)
+}
