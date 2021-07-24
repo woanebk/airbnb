@@ -506,7 +506,7 @@ function App() {
 
     </div>
 
-    <Footer />
+
     {
       LayerRouter(layerSection)
     }
