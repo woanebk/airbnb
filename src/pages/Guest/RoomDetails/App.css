@@ -84,7 +84,7 @@ div.img-container + div.img-container{
   width: 100%;
 }
 
-div.title-container{
+div.room-details > div.title-container{
   display: flex;
   flex-direction: row;
   font-size: 15px;
@@ -131,6 +131,8 @@ div.host-card{
   margin-top: 30px;
   display: flex;
   flex-direction: row;
+  padding-bottom: 20px;
+  border-bottom: 2px solid gainsboro
 }
 
 div.host-name-reviews-container{
@@ -233,6 +235,7 @@ div.room-spec-container{
   display:  flex;
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
 div.room-spec-img-container{
@@ -314,15 +317,72 @@ div.guests-quantity-picker-container{
   font-weight: 610;
 }
 
+div.save-btn{
+  display: flex;
+  justify-content: center;
+  height:60px;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid gainsboro;
+  margin-bottom: 20px;
+}
+
+div.saved-btn{
+  display: flex;
+  justify-content: center;
+  height:60px;
+  border-radius: 5px;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color:var(--pink-color)
+}
+
+div.saved-btn > p.save-btn-content{
+  font-size: 22px;
+  font-weight: 500;
+  color: white
+}
+
+div.saved-btn > .heart-icon{
+  font-size: 22px;
+  color: white;
+  margin-right: 10px
+}
+
+div.save-btn > p.save-btn-content{
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--gray-color)
+}
+
+div.save-btn > .heart-icon{
+  font-size: 22px;
+  color: var(--gray-color);
+  margin-right: 10px
+}
+
 div.book-description-container{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 div.book-description-container > p.description{
   font-size: 12px;
   font-weight: 500;
-  color: #606060
+  color: #606060;
+  margin-bottom: 5px
+}
+
+div.book-description-container > p.or{
+  font-size: 18px;
+  font-weight: 500;
+  color: #606060;
+  line-height: 0px;
+  margin-bottom: 20px;
 }
 
 div.book-form > div.price-roomrating-container{
@@ -480,6 +540,7 @@ div.reviews-section-header{
   justify-content: space-between;
   border-bottom: solid 2px gainsboro;
   padding-bottom: 20px;
+  flex-wrap:wrap
 }
 
 div.reviews-section-header > div.reviews-rating-container{
@@ -490,7 +551,7 @@ div.reviews-section-header > div.reviews-rating-container{
 }
 
 div.reviews-rating-container > p.rating-quantity{
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Arimo', sans-serif;
   font-weight: 600;
   color:var(--gray-color);
@@ -505,7 +566,7 @@ div.reviews-rating-container > div.stars-group {
 }
 
 div.stars-group > .react-icons-star{
-  font-size: 20px;
+  font-size: 18px;
   color:var(--main-color);
 }
 
@@ -535,12 +596,12 @@ div.tag-container > div.tag{
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 300px;
+  max-width: 300px;
   justify-content: space-between;
 }
 
 div.tag > p.tag-content{
-  font-size: 18px;
+  font-size: 15px;
   font-family: 'Arimo', sans-serif;
   font-weight: 500;
   color:var(--gray-color);
@@ -550,6 +611,7 @@ div.tag > p.tag-content{
 div.tag > div.stars-group {
   display: flex;
   align-items: center;
+  width:55%
 }
 
 div.comment-container{
@@ -612,7 +674,8 @@ div.post-comment-btn{
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 10px
+  right: 10px;
+  cursor: pointer;
 }
 
 div.post-comment-btn > p.post-rating {
@@ -799,4 +862,27 @@ div.host-details-container > div.host-description{
 
 div.host-description p.link{
 color:var(--main-color)
+}
+
+div.room-description > p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gray-color);
+}
+
+div.room-description > span {
+  font-size: 15px;
+  color: var(--gray-color);
+}
+
+div.overlay-layer{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(64, 64, 64, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

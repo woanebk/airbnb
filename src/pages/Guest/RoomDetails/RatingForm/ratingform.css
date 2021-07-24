@@ -1,0 +1,112 @@
+div.rating-form-container{
+    width:80vw;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    padding:30px
+}
+
+div.rating-form-container > div.room-basic-info-rating-point-container{
+    height:500px;
+    width: 30%;
+}
+
+div.rating-container > div.reviews-container{
+    background-color: blue;
+    width: 70%
+
+}
+
+div.room-basic-info-rating-point-container > div.room-image {
+    width:100%;
+    height: 60%;
+    background-image: url(../Image-Slider/images/slide_1.jpg);
+    background-position: center;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+div.room-basic-info-rating-point-container > div.basic-info-container{
+    border-left: solid 2px gainsboro;
+    border-right: solid 2px gainsboro;
+    border-bottom: solid 2px gainsboro;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top:5px;
+    padding-left: 10px;
+    padding-right:10px
+}
+
+div.room-basic-info-rating-point-container > div.tag-container{
+    padding-left: 10px;
+}
+
+div.room-basic-info-rating-point-container div.tag{
+    flex-wrap: wrap;
+}
+
+div.room-basic-info-rating-point-container p.tag-content{
+    min-width: 120px
+}
+
+div.basic-info-container > p.title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+div.rating-form-container > div.reviews-container{
+    width:70%;
+    padding-left: 50px;
+    padding-right:20px;
+    position: relative;
+}
+
+div.reviews-container > div.title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    line-height: 0;
+}
+
+div.title-container > p.review-title{
+    font-size: 25px;
+    margin-right:10px;
+    margin-top: 25px;
+}
+
+div.reviews-container > textarea.input{
+    border-width: 2px;
+    border-color: gainsboro;
+    border-radius: 5px;
+    height: 220px;
+    font-size: 18px;
+}
+
+div.reviews-container > p.review-title{
+    font-size: 25px;
+}
+
+div.reviews-container > p.remaining-word{
+    position:absolute;
+    right: 20px;
+}
+
+div.reviews-container > div.post-review-btn{
+    width: 150px;
+    height: 50px;
+    background-color: var(--pink-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    cursor: pointer;
+}
+
+div.post-review-btn > p{
+    color: white
+}

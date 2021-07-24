@@ -4,8 +4,11 @@ import Carousel from './Image-Slider';
 import { FiChevronDown, FiArrowRight } from "react-icons/fi";
 import { HiStar } from "react-icons/hi";
 import { BiSearchAlt } from "react-icons/bi"
-import { FaRegCheckCircle, FaRegFlag } from 'react-icons/fa'
-// import styled from 'styled-components'
+import { FaRegCheckCircle, FaRegFlag, FaRegHeart, FaHeart } from 'react-icons/fa'
+import styled from 'styled-components'
+import Footer from './Footer'
+import RatingForm from './RatingForm'
+import PaymentForm from './PaymentForm'
 
 import GoogleMapReact from 'google-map-react';
 
@@ -97,10 +100,10 @@ const Comment = (imgURL, userName, dateReview, comment, index) => {
   );
 }
 
-// const Input = styled.input.attrs(props => ({
-//   type: 'text',
-//   size: props.small ? 5 : undefined,
-// }))
+const Input = styled.input.attrs(props => ({
+  type: 'text',
+  size: props.small ? 5 : undefined,
+}))
 
 const RoomSpecImgUrls = [{
   url1: './images/guests.png',
@@ -132,12 +135,29 @@ const DateDisplay = (date, defaultString) => {
 
 
 function App() {
+  const [layerSection, setLayerSection] = useState('');
+  // const [isLayerDisplayed, setLayerDisplayed]=useState(false)
+  const [isSaved, setIsSaved] = useState(false)
   const [chosenTitle, set_chosenTitle] = useState('Details');
   const [isQuantityDropDownOpened, set_QuantityDropDown] = useState(false);
   const [guestQuantity, set_QuestQuantity] = useState(1);
   const [checkinDate, setCheckInDate] = useState(null);
   const [checkoutDate, setCheckOutDate] = useState(null);
   const [focusedInput, setFocusedInput] = useState(null);
+
+  const LayerRouter = (layerSection) => {
+    switch (layerSection) {
+      case 'review':
+        return (
+          <div className="overlay-layer"><RatingForm props={() => setLayerSection('')} /></div>
+        )
+      case 'payment':
+        return (
+          <div className="overlay-layer"><PaymentForm props={() => setLayerSection('')} /></div>
+        )
+    }
+  }
+
   function useOutsideAlerter(ref) {
     useEffect(() => {
       /**
@@ -238,6 +258,10 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="room-description">
+            <p>About this listing</p>
+            <span>Our apartment has 1 living room, dining space, 1 bedroom (1 double bed and sofa bed), 1 bathroom and the balcony. <br />- The bedroom:  Our view from the bedroom is romantic with the view of the grand hill shimmering. We provide air-conditioner, the bed topper, and the bolster.<br />- Kitchen: necessary facilities is provided to cook a delicious meal.<br />- Balcony: spacious balcony with a set of 2 cane-chairs vs 1 table, where guests relax and enjoy the stunning views of the blue sea with a delicious meal.</span>
+          </div>
         </>)
       case 'Reviews':
         return (<div className="reviews-section-container">
@@ -294,7 +318,7 @@ function App() {
             comments.map((item, index) => Comment(item.imgURL, item.userName, item.dateReview, item.comment, index))
           }
 
-          <div className="post-comment-btn">
+          <div className="post-comment-btn" onMouseUp={() => { setLayerSection('review') }}>
             <p className="post-rating">Post rating</p>
           </div>
         </div>
@@ -364,14 +388,14 @@ function App() {
               <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi Guests,<br /></p>
               <p>
 
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you for considering staying with me during your visit to Vung Tau. Whether you're coming for business, pleasure, or to visit  family, I think you will enjoy my rooms and my neighborhood.<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  I've been here in Vung Tau since 2000, and I can help you figure out what to do and how to get around. I've travelled quite a bit and enjoy having the world come to me!
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you for considering staying with me during your visit to Vung Tau. Whether you're coming for business, pleasure, or to visit  family, I think you will enjoy my rooms and my neighborhood.<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  I've been here in Vung Tau since 2000, and I can help you figure out what to do and how to get around. I've travelled quite a bit and enjoy having the world come to me!
                 Here are all of my listing:<br />
-                <br/>
-                </p>
-                <p>Home with nice garden:</p> <p className="link"> https://www.airbnb.com/rooms/1234<br /></p>
-                <p>Home with no garden:  </p><p className="link"> https://www.airbnb.com/rooms/4321<br /></p>
-                <p>Home with nothing inside:</p><p className="link"> https://www.airbnb.com/rooms/4567<br /></p>
+                <br />
+              </p>
+              <p>Home with nice garden:</p> <p className="link"> https://www.airbnb.com/rooms/1234<br /></p>
+              <p>Home with no garden:  </p><p className="link"> https://www.airbnb.com/rooms/4321<br /></p>
+              <p>Home with nothing inside:</p><p className="link"> https://www.airbnb.com/rooms/4567<br /></p>
 
               <div className="report-btn">
                 <FaRegFlag className="flag-icon" />
@@ -464,17 +488,29 @@ function App() {
             {/* <div class="quantity-dropdown-wrapper">{isQuantityDropDownOpened && <QuantityDropDown />}</div> */}
             <OutsideAlerter />
 
-            <div className="book-btn" onClick={() => { }}><p className="book-btn-content">Book</p></div>
+            <div className="book-btn" onClick={() => { setLayerSection('payment') }}><p className="book-btn-content">Book</p></div>
             <div className="book-description-container">
               <p className="description">You won't be charged yet</p>
+              <p className="or">OR</p>
             </div>
-
+            <div className="save-btn-container">
+              {
+                isSaved ? <div className="saved-btn" onMouseUp={() => { setIsSaved(!isSaved) }}><FaHeart className="heart-icon" /><p className="save-btn-content">Saved</p></div> :
+                  <div className="save-btn" onMouseUp={() => { setIsSaved(!isSaved) }}><FaRegHeart className="heart-icon" /><p className="save-btn-content">Save to wish list</p></div>
+              }
+            </div>
           </div>
         </div>
 
       </div>
 
     </div>
+
+    <Footer />
+    {
+      LayerRouter(layerSection)
+    }
+    {/* { && <div className="overlay-layer"><RatingForm props={()=>setLayerDisplayed(false)}/></div>} */}
   </>
   );
 }
