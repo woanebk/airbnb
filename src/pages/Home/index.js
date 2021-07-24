@@ -44,8 +44,20 @@ function App() {
                 <path d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"></path>
               </svg>
             </h1>
-           
           </a>
+
+          <div style={{marginLeft:"970px", marginTop:"-30px" }} className="col-4">
+            <div className="text-center">
+              <Link to="/login" className="btn  btn_normal mr5 mb3 mt3">
+              <i class="fas fa-sign-in-alt"></i> &nbsp; &nbsp; Login
+              </Link>
+              <Link style={{ marginLeft: '20px' }} className="btn  btn_normal mr5 mb3 mt3">
+                <i class="far fa-question-circle"></i> &nbsp; Sign up
+              </Link>
+            </div>
+          </div>
+       
+     
 
           <div class="max-w-5xl mx-auto lg:py-32 py-4">
             <h2 style={{ textAlign: 'center' }} class="lg:text-5xl text-4xl font-semibold text-white leading-none mb-4">
@@ -119,7 +131,7 @@ function App() {
                                   <div style={{ marginTop: '5px' }} className="button__wrapper">
                                     <button onClick={decrease}>-</button>
                                     <h1
-                                      style={{ fontSize: '20px', fontWeight: 'bold', marginLeft: '-10px' }}
+                                      style={{ fontSize: '20px', fontWeight: 'bold', marginLeft: '-10px', textAlign:"center" }}
                                       className={count > 0 ? 'positive' : count < 0 ? 'negative' : null}
                                     >
                                       {count}
@@ -160,7 +172,7 @@ function App() {
           <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">Live anywhere</h3>
 
           <div className="cards-list">
-            <div className="card 1">
+            <div className="card 1 card1">
               <div className="card_image">
                 {' '}
                 <img src="https://i.redd.it/b3esnz5ra34y.jpg" />{' '}
@@ -169,7 +181,7 @@ function App() {
                 <p>Unique Stay</p>
               </div>
             </div>
-            <div className="card 2">
+            <div className="card 2 card1">
               <div className="card_image">
                 <img src="https://media1.popsugar-assets.com/files/thumbor/Nd5p9XJMuX_mvnHzBFNb-MK9XHs/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/01/21/032/n/1922243/7c0e0ba9_edit_img_image_14690959_1453249161/i/Cute-Dog-GIFs.png" />
               </div>
@@ -177,7 +189,7 @@ function App() {
                 <p>Pet allowed</p>
               </div>
             </div>
-            <div className="card 3">
+            <div className="card 3 card1">
               <div className="card_image">
                 <img src="https://media.giphy.com/media/10SvWCbt1ytWCc/giphy.gif" />
               </div>
@@ -185,7 +197,7 @@ function App() {
                 <p>Entire home</p>
               </div>
             </div>
-            <div className="card 4">
+            <div className="card 4 card1">
               <div className="card_image">
                 <img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" />
               </div>
@@ -786,8 +798,10 @@ function App() {
               Add dates
             </a>
           </section>
+          
         </div>
       </body>
+      <Footer></Footer>
     </>
   );
 }

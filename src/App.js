@@ -9,6 +9,8 @@ import SearchList from './pages/SearchList/searchList';
 //import RoomDetails from './pages/Guest/RoomDetails'
 import Footer from './pages/Home/footer';
 import RoomDetails from './pages/Guest/RoomDetails';
+import Login from './pages/login';
+import Register from './pages/resgister';
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
       <Router>
         <div>
           <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
             <Route path="/becomeahost">
               <Introduce />
             </Route>
@@ -32,16 +40,16 @@ function App() {
               <SearchList />
             </Route>
 
+            <Route path="/room">
+              <RoomDetails />
+            </Route>
+            
             <Route path="/">
               <Home />
             </Route>
-            {/* <Route path="/room-details">
-            <RoomDetails />
-          </Route> */}
           </Switch>
         </div>
       </Router>
-      <Footer />
     </>
   );
 }

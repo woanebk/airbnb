@@ -90,7 +90,7 @@ export class SearchList extends Component {
             <div>
         <div className="blog-card">
           <div className="meta">
-            <div className="photo" style={{backgroundImage: 'url(https://safehouz.com/wp-content/uploads/2019/07/40-Beautiful-Girls-Room-Decorating-Ideas-07.jpg)'}} />
+           <Link  to='/room'> <div className="photo" style={{backgroundImage: 'url(https://safehouz.com/wp-content/uploads/2019/07/40-Beautiful-Girls-Room-Decorating-Ideas-07.jpg)'}} /> </Link>
             <ul className="details">
             
             <ul style={{fontSize:"19px"}} className="details">
@@ -101,7 +101,7 @@ export class SearchList extends Component {
             </ul>
           </div>
           <div className="description">
-            <h1>Room in center of London</h1>
+            <Link to='room' style={{fontSize:"28px"}}>Room in center of London</Link>
             <h2>Stay at this spacious Edwardian House</h2>
             <p> 1 guest · 1 bedroom · 1 bed · 1.5 shared bthrooms</p>
             <p>A modern, well-equipped studio apartment just minutes from main tourist spots  like Ben Thanh...</p>

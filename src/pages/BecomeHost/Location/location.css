@@ -11,9 +11,9 @@
 }
 
 .btn_normal{
-	color:#3AE7E1;
+	color:#008080;
 	background-color:white;
-	border-color: #3AE7E1;
+	border-color: #008080;
 	transition: all 1s;
 	-moz-transition: all 1s;
 	-webkit-transition: all 1s;
@@ -24,7 +24,7 @@
 	transform:translate(3px,5px);
 	transform-origin: 100%;
 	background-color: white;
-	color: #3AE7E1;
+	color: #008080;
 }
 
 a.active {
