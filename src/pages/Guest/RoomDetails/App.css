@@ -719,13 +719,14 @@ div.provided-items-container > div.item-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-top: 10px;
 }
 
 div.item-container > .check-icon{
   font-size: 18px;
   color: var(--main-color);
   position: relative;
-  top: -2px
+  top: -6px
 }
 
 div.item-container > p.content{

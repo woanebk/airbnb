@@ -379,6 +379,7 @@ function App() {
               </div>
               <div className="host-provided">
                 <p className="title">Tommy provided</p>
+                <p className="title"></p>
                 <div className="provided-items-container">
                   <div className="item-container">
                     <FaRegCheckCircle className="check-icon" />
